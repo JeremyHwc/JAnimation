@@ -34,3 +34,27 @@
                 android:pathData="M100,100,L400,100,L400,400,L100,400z"/>
         
         </vector>
+        
+        VectorDrawable兼容性
+            Android L 
+            只兼容minSDK>=21的版本
+            >几乎没有兼容性
+            
+            Gradle Plugin 1.5
+                设备版本>=21 ---使用Vector
+                设备版本< 21 ---将Vector转换为PNG
+                >增加了兼容的成本，效果也有限
+                
+            AppCompat23.2
+                静态Vector支持Android 2.1+
+                动态Vector支持Android 3.0+
+                >几乎可以兼容大部分使用场景
+                
+        使用静态的VectorDrawable
+            Vector图像标签：
+                android:width\android:height --- 定义图片的宽高
+                android:viewportHeight\android:viewportWidth --- 定义图像被划分的比例大小
+            在控件中使用：
+                    
+                
+                
