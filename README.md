@@ -79,6 +79,30 @@
                         android:background="@drawable/ic_voice_light"/>
                         
         使用动态的VectorDrawable
+            配置动画粘合剂 --- animated-vector
+            
+            路径动画：trimPathStart/trimPathEnd，如何去截取
+            
+            动态VectorDrawable兼容性问题：
+                向下兼容问题：Path Morphing --- 路径变换动画，在Android pre-L版本下是无法使用
+                              Path Interpolation --- 路径差之器，在Android pre-L版本只能使用系统的插值器，不能自定义
+                向上兼容问题：Path Morphing --- 路径变换动画，在Android L 版本以上需要使用代码配置
+                              抽取String兼容问题，不支持Strings.xml中读取<PathData>
+                              
+        VectorDrawable使用场景
+            Vector vs Bitmap:
+                png可以借助gpu渲染，vectorDrawable体积小，但是没办法借助gpu进行渲染，只能靠cpu计算来实现渲染，我们主要从图像复杂度和图像更新频率两方面进行考虑。
+                （1）Bitmap的绘制效率并不一定会比Vector高，他们有一定的平衡点，当Vector比较简单是，其效率是一定比Bitmap高的，所以，为了保证Vector的高效率，
+                     Vector需要更加简单，PathData更加标准、精简、当Vectort图像变得非常复杂时，就需要使用Bitmap来代替了。
+                （2）Vector适用于ICON、Button、ImageView的图标等小的ICON,或者是需要的动画效果，由于Bitmap在GPU中有缓存功能，而Vector并没有，所以Vector图像不能
+                     做频繁的重回。
+                （3）Vector图像国语复杂时，不仅仅要注意会知晓率，初始化效率也是需要考虑的重要因素。
+                （4）SVG加载速度会快于PNG,但渲染速度会鳗鱼PNG,毕竟PNG有硬件加速，但平均来看，加载速度的提升弥补了绘制的速度缺陷。
+                
+                
+    Bezier曲线
+                
+            
             
                 
                 
