@@ -101,6 +101,15 @@
                 
                 
     Bezier曲线
+    
+    PathMeasure 
+        PathMeasure pathMeasure = new PathMeasure(); //创建PathMeasure对象
+        pathMeasure.setPath(Path path,boolean forceClosed);//设置关联Path,forceClosed参数对绑定的Path不会产生任何影响，只会对PathMeasure的测量结果有影响
+        
+        getLength();//获取计算的路径长度
+        getSegment(float startD,float stopD,Path dst,boolean startWithMoveTo)//用于截取传入的path路径的片段。startD、stopD：起始点；dst：保存截取出来的路径；startWithMoveTo：每次截取时是否从上次截取的终点开始截取
+        getPosTan(float distance,float[] pos,float[] tan);//用于获取路径上某点的坐标及其切线的坐标
+        Math.atan2(tan[1],tan[0])*180.0/Math.PI：用于获取路径上某点的切线的角度
                 
             
             

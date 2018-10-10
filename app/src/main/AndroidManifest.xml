@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".pathmeasure.PathMeasureActivity"/>
+        <activity android:name=".pathmeasure.PathPaintActivity"/>
+        <activity android:name=".pathmeasure.PathTracingActivity"/>
+        <activity android:name=".pathmeasure.PathPosTanActivity"/>
     </application>
 
 </manifest>
