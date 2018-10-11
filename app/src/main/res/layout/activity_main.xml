@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="10dp"
     tools:context=".MainActivity">
 
@@ -12,6 +13,20 @@
         android:layout_height="wrap_content"
         android:onClick="onClickPathMeasure"
         android:text="PathMeasure"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickBezier"
+        android:text="Bezier"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickVectorDrawable"
+        android:text="VectorDrawable"
         android:textAllCaps="false"/>
 
 

@@ -21,6 +21,19 @@
         <activity android:name=".pathmeasure.PathPaintActivity"/>
         <activity android:name=".pathmeasure.PathTracingActivity"/>
         <activity android:name=".pathmeasure.PathPosTanActivity"/>
+
+        <!--Bezier曲线-->
+        <activity android:name=".bezier.BezierActivity"/>
+        <activity android:name=".bezier.DrawPadActivity"/>
+        <activity android:name=".bezier.PathBezierActivity"/>
+        <activity android:name=".bezier.PathMorthingActivity"/>
+        <activity android:name=".bezier.SecondBezierActivity"/>
+        <activity android:name=".bezier.ThirdBezierActivity"/>
+        <activity android:name=".bezier.WaveActivity"/>
+
+        <activity android:name=".vectordrawable.VectorDrawableActivity"/>
+        <activity android:name=".vectordrawable.VectorLActivity"/>
+
     </application>
 
 </manifest>
